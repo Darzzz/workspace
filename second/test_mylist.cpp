@@ -9,7 +9,7 @@ void Test_MyList::addLast()
 {
        MyList l;
        l.addLast(1);
-       QCOMPARE(l.getItem(0), 2);
+       QCOMPARE(l.getItem(0), 1);
        l.addLast(2);
        QCOMPARE(l.getItem(1), 2);
 }

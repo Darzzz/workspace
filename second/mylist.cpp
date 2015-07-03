@@ -33,7 +33,7 @@ MyListData MyList::getItem(int index)
 {
     if(index<0)
         throw "index is out of bounds";
-    if (!first)
+    if (!first)// sedfdsfsdsdfsdfsdfsdfsdfsdfsdfsd
         throw "empty list";
 
     ListNode *node = first;
