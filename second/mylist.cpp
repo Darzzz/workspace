@@ -13,6 +13,18 @@ MyList::~MyList()
         delete t;
     }
 }
+void MyList:: removLast(){
+    ListNode* t = first;
+    if(first)
+        t= nullptr;
+    else{
+        while(t->next->next!=nullptr)
+            t=t->next;
+        ListNode* t1 = t->next;
+        t->next = nullptr;
+        delete t1;
+    }
+}
 
 void MyList::addLast(MyListData newData)
 {
@@ -29,11 +41,20 @@ void MyList::addLast(MyListData newData)
     }
 }
 
+int MyList::count (){
+    int k=0;
+    ListNode* t= first;
+    while(t!=nullptr){
+        k++;
+        t=t->next;}
+    return k;
+}
+
 MyListData MyList::getItem(int index)
 {
     if(index<0)
         throw "index is out of bounds";
-    if (!first)// sedfdsfsdsdfsdfsdfsdfsdfsdfsdfsd
+    if (!first)
         throw "empty list";
 
     ListNode *node = first;

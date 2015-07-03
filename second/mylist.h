@@ -22,9 +22,9 @@ public:
     ~MyList();
 
     void addLast(MyListData newData);
-    MyListData removeLast();
+   // MyListData removeLast();
     MyListData getItem(int index);
-
+    void removLast();
     int count();
 
 };
